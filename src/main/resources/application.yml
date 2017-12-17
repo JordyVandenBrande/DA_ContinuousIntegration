@@ -1,0 +1,10 @@
+##application.yml van review service
+server:
+    port: 0
+##8751
+eureka:
+    instance:
+        leaseRenewalIntervalInSeconds: 10
+        instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+client:
+    registryFetchIntervalSeconds: 5
